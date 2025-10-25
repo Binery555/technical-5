@@ -28,8 +28,9 @@
     --bubble-border:#e6edf5;
     --bubble-shadow:0 6px 18px rgba(17,24,39,0.06);
 
-    /* NEW PROFIT CARD GREEN */
-    --greenNew:#39a271;
+    /* NEW PROFIT CARD COLORS */
+    --greenNew:#2cbc84;   /* Long label + green numbers */
+    --shortNew:#982a3a;   /* Short label color (NEW) */
 
     /* New profit card bottom line — tuned to the uploaded example */
     --nx-line-color:#1f1f1f;     /* core line color (very dark grey) */
@@ -141,11 +142,14 @@
   .nx-time{ font-size:11px; opacity:.9; display:block; margin-top:0.08cm; transform: translateY(0.02cm); }
   .nx-body{ padding:0 16px calc(20px + 1cm); }
   .nx-title{ font-size:16px; font-weight:800; text-transform:uppercase; letter-spacing:.2px; }
-  .nx-pos{ margin:6px 0 10px; display:inline-flex; align-items:center; gap:10px; font-size:13px; font-weight:600; }
-  .nx-pos .nx-short{ color:#ff6b6b; }
+
+  /* ↓↓↓ MATCH SIZES: Long/Short + Leverage = Entry Price label size (11px) */
+  .nx-pos{ margin:6px 0 10px; display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:600; }
+  .nx-pos .nx-short{ color:var(--shortNew); }
   .nx-pos .nx-long{ color:var(--greenNew); }
   .nx-div{ width:1px; height:12px; background:#6a6a6a; display:inline-block; }
-  .nx-lev{ color:#8c9692; }
+  .nx-lev{ color:#8c9692; font-size:inherit; }
+
   .nx-pnl{ display:flex; align-items:baseline; gap:8px; margin:6px 0 8px; }
   .nx-usd,.nx-roi{ font-size:32px; font-weight:800; letter-spacing:-.4px; }
   .nx-u,.nx-percent{ font-size:16px; font-weight:700; }
